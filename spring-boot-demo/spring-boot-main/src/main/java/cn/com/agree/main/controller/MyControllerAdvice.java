@@ -17,7 +17,7 @@ public class MyControllerAdvice extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public ResponseEntity handleControllerException(HttpServletRequest request, Throwable throwable){
+    public ResponseEntity handleControllerException(HttpServletRequest request, Throwable throwable) {
         HttpStatus status = getStatus(request);
         Map<String, String> result = new HashMap<>();
         result.put("status", (String.valueOf(status.value())));
@@ -26,19 +26,18 @@ public class MyControllerAdvice extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(ArithmeticException.class)
-    public ModelAndView handleControllerArithmetic(HttpServletRequest request, Throwable throwable)
-    {
+    public ModelAndView handleControllerArithmetic(HttpServletRequest request, Throwable throwable) {
         HttpStatus status = getStatus(request);
         ModelAndView mav = new ModelAndView();
         mav.setViewName("error/5xx");
-        mav.addObject("errorcode",status.value());
-        mav.addObject("errorMsg",throwable.getMessage());
+        mav.addObject("errorcode", status.value());
+        mav.addObject("errorMsg", throwable.getMessage());
         return mav;
     }
 
     private HttpStatus getStatus(HttpServletRequest request) {
         Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
-        if (statusCode == null){
+        if (statusCode == null) {
             return HttpStatus.INTERNAL_SERVER_ERROR;
         }
         return HttpStatus.valueOf(statusCode);
