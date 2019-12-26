@@ -1,4 +1,8 @@
-#spring:
-#  cloud:
-#    config:
-#      uri: http://myconfigserver.com
+spring:
+  application:
+    name: config-single-client
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888

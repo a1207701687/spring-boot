@@ -19,6 +19,7 @@ ext {
 dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.2.2.RELEASE'
     compile('org.springframework.boot:spring-boot-configuration-processor:2.0.6.RELEASE'){
         because "为了消除@ConfigurationProperties注入自定义配置属性时产生警告"
     }

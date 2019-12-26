@@ -1,2 +1,32 @@
 server:
   port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/a1207701687/spring-boot
+          username: a1207701687
+          password: '{cipher}c75ff15d1a72a0b912e9eeaf003c9e3fd9cb894380840e335930d61c65586f3d'
+          default-label: master
+          search-paths: /spring-cloud-demo/config
+  application:
+    name: config-single-server
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*, hystrix.stream"
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8081/eureka/
+  instance:
+    metadata-map:
+      cluster: spring
+#turbine:
+##  combine-host-port: true
+#  aggregator:
+#    cluster-config: default
+#  app-config: eureka-single-client
+#  cluster-name-expression: "default"

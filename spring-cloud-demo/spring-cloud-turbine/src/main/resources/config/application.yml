@@ -1,0 +1,15 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: TurbineService
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8081/eureka/
+turbine:
+  aggregator:
+    cluster-config: spring
+  app-config: config-single-server, eureka-single-client
+  combine-host-port: true
+  cluster-name-expression: metadata['cluster']

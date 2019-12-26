@@ -4,4 +4,6 @@ include 'spring-cloud-eureka-client'
 include 'spring-cloud-eureka-server'
 include 'spring-cloud-config-client'
 include 'spring-cloud-config-server'
+include 'spring-cloud-turbine1'
+include 'spring-cloud-turbine'
 

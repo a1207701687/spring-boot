@@ -1,12 +1,14 @@
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/a1207701687/spring-boot
-          username: a1207701687
-          password: ly950121
-          default-label: master
-          search-paths: /spring-cloud-demo/config
-  application:
-    name: config-single-server
+#spring:
+##  cloud:
+##    config:
+##      server:
+##        git:
+##          uri: https://github.com/a1207701687/spring-boot
+##          username: a1207701687
+##          password: ly950121
+##          default-label: master
+##          search-paths: /spring-cloud-demo/config
+##  application:
+##    name: config-single-server
+encrypt:
+  key: this is a test

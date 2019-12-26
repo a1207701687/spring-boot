@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: eureka-single-client
+  profiles:
+    active: dev
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        service-id: config-single-server
+        enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8081/eureka/
