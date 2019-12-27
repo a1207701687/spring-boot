@@ -1,6 +1,7 @@
 package cn.com.agree.config;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableConfigServer
 @EnableCircuitBreaker
-//@EnableHystrixDashboard
 @EnableHystrix
 @RestController
 @EnableDiscoveryClient

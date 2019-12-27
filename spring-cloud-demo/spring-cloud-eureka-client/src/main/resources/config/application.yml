@@ -13,8 +13,3 @@ management:
     web:
       exposure:
         include: "*, hystrix.stream"
-turbine:
-  aggregator:
-    cluster-config: default
-  app-config: config-single-server, eureka-single-client
-  cluster-name-expression: new String("default")
