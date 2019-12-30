@@ -1,0 +1,7 @@
+server:
+  port: 8090
+data:
+  env: config-eureka-dev
+  user:
+    username: eureka-client-user---test3
+    password: 123456
