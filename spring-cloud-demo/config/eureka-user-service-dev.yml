@@ -1,5 +1,3 @@
-server:
-  port: 8090
 data:
   env: config-eureka-dev
   user:
