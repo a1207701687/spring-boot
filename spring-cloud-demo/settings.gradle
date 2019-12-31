@@ -6,4 +6,5 @@ include 'spring-cloud-config-client'
 include 'spring-cloud-config-server'
 include 'spring-cloud-turbine1'
 include 'spring-cloud-turbine'
+include 'spring-cloud-user-service'
 

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-user-service
+  cloud:
+    config:
+      discovery:
+        service-id: config-single-server
+        enabled: true
+      profile: prod
+eureka:
+  instance:
+    metadata-map:
+      cluster: spring
+    appname: user-service
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8081/eureka/
