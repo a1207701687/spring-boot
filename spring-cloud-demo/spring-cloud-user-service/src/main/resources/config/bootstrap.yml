@@ -6,7 +6,7 @@ spring:
       discovery:
         service-id: config-single-server
         enabled: true
-      profile: prod
+      profile: dev
 eureka:
   instance:
     metadata-map:

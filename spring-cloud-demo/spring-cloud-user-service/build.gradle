@@ -24,6 +24,9 @@ dependencies {
     compile('org.springframework.boot:spring-boot-configuration-processor:2.0.6.RELEASE'){
         because "为了消除@ConfigurationProperties注入自定义配置属性时产生警告"
     }
+    // https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc8
+//    compile group: 'com.oracle.jdbc', name: 'ojdbc8', version: '12.2.0.1'
+
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
