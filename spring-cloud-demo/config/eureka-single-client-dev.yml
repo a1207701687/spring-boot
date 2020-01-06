@@ -3,3 +3,8 @@ data:
   user:
     username: eureka-client-user---test3
     password: 123456
+zuul:
+  routes:
+    users:
+      path: /userInfo/**
+      serviceId: eureka-user-service
