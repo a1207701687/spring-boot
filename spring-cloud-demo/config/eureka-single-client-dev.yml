@@ -8,4 +8,5 @@ zuul:
     users:
       path: /userInfo/**
       serviceId: eureka-user-service
+      stripPrefix: false
   prefix: /apiTest
