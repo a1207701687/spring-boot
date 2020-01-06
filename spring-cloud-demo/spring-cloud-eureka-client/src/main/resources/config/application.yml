@@ -18,3 +18,4 @@ management:
 #    users:
 #      path: /userInfo/**
 #      serviceId: eureka-user-service
+#  prefix: /apiTest
