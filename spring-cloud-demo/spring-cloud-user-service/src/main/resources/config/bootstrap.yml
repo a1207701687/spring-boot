@@ -14,4 +14,4 @@ eureka:
     appname: user-service
   client:
     service-url:
-      defaultZone: http://user:123@localhost:8081/eureka/
+      defaultZone: http://user:123@192.168.88.129:8081/eureka/
